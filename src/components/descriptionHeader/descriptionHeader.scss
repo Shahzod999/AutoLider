@@ -1,0 +1,67 @@
+.container {
+  .descriptionHeader {
+    display: flex;
+    justify-content: center;
+    gap: 151px;
+    margin-top: 180px;
+
+    .descBox {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      width: 619px;
+      height: 466px;
+      &__calc {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 26.07px;
+        &__box {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 20px;
+        }
+        &__payment {
+          display: flex;
+          justify-content: space-between;
+          div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          strong {
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 35.55px;
+          }
+        }
+      }
+    }
+  }
+  .contactUs {
+    margin-top: 200px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .contactusBox {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      position: relative;
+      hr {
+        background-color: #bf3535;
+        color: #bf3535;
+        height: 3px;
+      }
+      span {
+        width: 60%;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 42.66px;
+      }
+      p {
+        text-align: center;
+        width: 70%;
+      }
+    }
+  }
+}
