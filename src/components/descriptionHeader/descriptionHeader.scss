@@ -42,14 +42,27 @@
       }
     }
   }
-  .contactUs {
-    margin-top: 200px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    column-gap: 420px;
-    row-gap: 50px;
+}
 
+.contactUs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  max-width: 1920px;
+  margin: auto;
+  margin-top: 200px;
+
+  .contactus__box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    &:hover .arrow .arrowinside {
+      width: 0%;
+    }
     span {
       text-wrap: wrap;
       font-size: 36px;
@@ -59,31 +72,25 @@
     p {
       text-align: center;
     }
-    .arrows {
-      grid-column: 1/-1;
-      .contactUsArrow {
-        left: 0;
-
+    .arrow {
+      width: 100%;
+      .arrowinside {
         position: absolute;
+        left: 0;
         width: 100%;
+        transition: 1s;
 
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 50px;
         .longArrow {
           display: flex;
           align-items: center;
-          justify-content: flex-end;
-          position: relative;
           width: 100%;
-          transition: 1s;
-          &:hover {
-            width: 0%;
+          svg {
+            transform: translate(-10px);
           }
+
           &::before {
             content: "";
-            position: absolute;
-            width: 99%;
+            width: 100%;
             background-color: #bf3535;
             height: 2px;
             left: 0;

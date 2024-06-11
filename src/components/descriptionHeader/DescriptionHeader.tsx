@@ -54,28 +54,40 @@ const DescriptionHeader = () => {
             <Image src="/car1.png" width={900} height={480} alt="Picture of the author" />
           </div>
         </div>
+      </div>
 
-        <div className="contactUs">
+      <div className="contactUs">
+        <div className="contactus__box">
           <span>CHOOSE AUTOMOBILE</span>
-          <span>CONTACT TO US</span>
-          <span>TO CONCLUDE AGREEMENT</span>
-
-          <div className="arrows">
-            <div className="contactUsArrow">
-              <div className="longArrow">
-                <MdOutlineArrowForwardIos fill="#BF3535" />
-              </div>
-              <div className="longArrow">
-                <MdOutlineArrowForwardIos fill="#BF3535" />
-              </div>
+          <div className="arrow">
+            <div className="arrowinside">
               <div className="longArrow">
                 <MdOutlineArrowForwardIos fill="#BF3535" />
               </div>
             </div>
           </div>
-
           <p>Choose a car from our catalog or offer your own option</p>
+        </div>
+        <div className="contactus__box">
+          <span>CONTACT TO US</span>
+          <div className="arrow">
+            <div className="arrowinside">
+              <div className="longArrow">
+                <MdOutlineArrowForwardIos fill="#BF3535" />
+              </div>
+            </div>
+          </div>
           <p>Contact us at any convenient time for you</p>
+        </div>
+        <div className="contactus__box">
+          <span>TO CONCLUDE AGREEMENT</span>
+          <div className="arrow">
+            <div className="arrowinside">
+              <div className="longArrow">
+                <MdOutlineArrowForwardIos fill="#BF3535" />
+              </div>
+            </div>
+          </div>
           <p>The contract is concluded within one day</p>
         </div>
       </div>
