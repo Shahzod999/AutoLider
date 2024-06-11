@@ -9,7 +9,7 @@
     font-weight: 600;
     line-height: 28.44px;
     span {
-      color: #BF3535;
+      color: #bf3535;
     }
   }
   nav {
@@ -26,7 +26,7 @@
         &::after {
           content: "";
           width: 0%;
-          background-color: #BF3535;
+          background-color: #bf3535;
           position: absolute;
           bottom: 0;
           left: 0;
@@ -35,7 +35,7 @@
           transition: 0.5s ease;
         }
         &:hover {
-          color: #BF3535;
+          color: #bf3535;
           &::after {
             width: 100%;
           }
@@ -47,14 +47,125 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    .userMenu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      .buttonActive {
+        fill: white;
+        box-shadow: 3px 3px 3px black inset;
+        background-color: #bf3535;
+        border-radius: 50%;
+      }
+
+      &:hover .buttonHover {
+        transition: 0.5s ease;
+        fill: white;
+        background-color: #bf3535;
+        border-radius: 50%;
+      }
+      &:active .buttonHover {
+        box-shadow: 1px 1px 1px black inset;
+      }
+
+      .personalArea {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        padding: 13px 31px;
+        border-radius: 5px;
+        background-color: #3d3d3d;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 15.41px;
+        transition: 0.5s ease;
+        .personalInfo {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 282px;
+          height: 140px;
+          text-align: left;
+          padding: 7px 0;
+          * {
+            color: white;
+          }
+          span {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14.22px;
+          }
+          strong {
+            font-size: 10px;
+            font-weight: 500;
+            line-height: 11.85px;
+          }
+          button {
+            cursor: pointer;
+            text-align: left;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: 0.5s ease;
+
+            &:hover {
+              transform: scale(1.02);
+            }
+            span {
+              font-size: 20px;
+            }
+          }
+        }
+        .personal {
+          color: white;
+          transition: 0.5s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+        .logIn {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          transition: 0.5s ease;
+
+          span {
+            color: white;
+          }
+          svg {
+            fill: white;
+          }
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
     .button {
       display: flex;
+      width: fit-content;
+      text-wrap: nowrap;
       align-items: center;
       justify-content: center;
       gap: 10px;
       border: 1px solid;
       border-radius: 20px;
       padding: 10px 25px;
+      transition: 0.5s ease;
+      cursor: pointer;
+    }
+    .button:hover {
+      color: white;
+      background-color: #606060;
+      gap: 15px;
+    }
+    .button:active {
+      background-color: #626262;
+      box-shadow: 1px 1px 1px black inset;
     }
   }
 }

@@ -1,0 +1,122 @@
+.maps {
+  max-width: 1920px;
+  height: 850px;
+  margin: 0 auto;
+  margin-top: 200px;
+  display: flex;
+  .contactForm {
+    flex: 4;
+    padding-top: 150px;
+  }
+  .container {
+    .contactForm__holder {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      h2 {
+        color: white !important;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 47.4px;
+        position: relative;
+        width: fit-content;
+        padding-bottom: 20px;
+        cursor: default;
+        &:hover {
+          &::before {
+            transition: 0.5s ease;
+            left: 50%;
+          }
+        }
+        &::before {
+          content: "";
+          width: 50%;
+          height: 3px;
+          background-color: red;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      .contactForm__icons {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        svg {
+          font-size: 35px;
+          fill: white;
+          cursor: pointer;
+          transition: 0.2s ease;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+        .contactInfo {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          strong {
+            color: white !important;
+
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 29.63px;
+          }
+          span {
+            color: white !important;
+
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+  }
+  .adressMap {
+    flex: 5;
+    display: flex;
+    align-items: flex-end;
+    padding: 80px;
+    filter: grayscale(100%);
+    background-position: center;
+
+    .adressMapForm {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding: 35px;
+      width: 580px;
+      border-radius: 10px;
+      border: 0.5px solid lightgray;
+      background-color: white;
+      input {
+        height: 55px;
+        border: none;
+        padding: 15px;
+      }
+      button {
+        padding: 15px;
+        width: 140px;
+        border: 1px solid #bf3535;
+        transition: 0.5s ease;
+        border-radius: 5px;
+
+        &:hover {
+          color: white;
+          background-color: #bf3535;
+          border-radius: 10px;
+        }
+        &:active {
+          background-color: #e46767;
+          box-shadow: 1px 1px 1px black inset;
+        }
+      }
+      #comment {
+        height: 100px;
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+    }
+  }
+}

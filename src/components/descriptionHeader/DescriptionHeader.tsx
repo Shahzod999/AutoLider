@@ -60,7 +60,7 @@ const DescriptionHeader = () => {
         <div className="contactus__box">
           <span>CHOOSE AUTOMOBILE</span>
           <div className="arrow">
-            <div className="arrowinside">
+            <div className="arrowInside">
               <div className="longArrow">
                 <MdOutlineArrowForwardIos fill="#BF3535" />
               </div>
@@ -71,7 +71,7 @@ const DescriptionHeader = () => {
         <div className="contactus__box">
           <span>CONTACT TO US</span>
           <div className="arrow">
-            <div className="arrowinside">
+            <div className="arrowInside">
               <div className="longArrow">
                 <MdOutlineArrowForwardIos fill="#BF3535" />
               </div>
@@ -82,7 +82,7 @@ const DescriptionHeader = () => {
         <div className="contactus__box">
           <span>TO CONCLUDE AGREEMENT</span>
           <div className="arrow">
-            <div className="arrowinside">
+            <div className="arrowInside">
               <div className="longArrow">
                 <MdOutlineArrowForwardIos fill="#BF3535" />
               </div>
