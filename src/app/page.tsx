@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.scss";
 import Navigation from "@/components/navigation/Navigation";
 import DescriptionHeader from "@/components/descriptionHeader/DescriptionHeader";
 import GreatOffer from "@/components/greatOffer/GreatOffer";

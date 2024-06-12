@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 25%;
-  height: 620px;
+  width: 380px;
+  padding: 20px 10px;
+  // height: 620px;
   .blocks {
     display: flex;
     flex-wrap: wrap;
@@ -21,11 +22,12 @@
   }
   .picture {
     img {
+      width: 100%;
       object-fit: cover;
     }
   }
   .prices {
-    padding: 20px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -38,7 +40,7 @@
       }
     }
     button {
-      width: 80%;
+      width: 100%;
       padding: 10px;
       border: 1px solid #bf3535;
       border-radius: 5px;

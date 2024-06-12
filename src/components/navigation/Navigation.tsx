@@ -5,12 +5,12 @@ import "./navig.scss";
 import { PiUserCircleThin } from "react-icons/pi";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdLogout } from "react-icons/md";
+
 const Navigation = () => {
   const [user, setUser] = useState({
     userState: false,
     userInfo: false,
   });
-  console.log(user);
 
   const toggleUser = () => {
     setUser((prevState) => ({

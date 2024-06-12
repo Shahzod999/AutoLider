@@ -14,9 +14,9 @@ const DescriptionHeader = () => {
             <div className="descBox__calc">
               <div className="descBox__calc__box">
                 <span>Car cost</span>
-                <span>50000000</span>
+                <span>5000000</span>
               </div>
-              <input type="range" id="initialFee" className="slider" min="100000" max="50000000" value="250000000" />
+              <input type="range" id="initialFee" className="slider" min="100000" max="5000000" />
             </div>
 
             <div className="descBox__calc">
@@ -24,7 +24,7 @@ const DescriptionHeader = () => {
                 <span>An initial fee</span>
                 <span>5000000</span>
               </div>
-              <input type="range" id="initialFee" className="slider" min="100000" max="5000000" value="2500000" />
+              <input type="range" id="initialFee" className="slider" min="100000" max="5000000" />
             </div>
 
             <div className="descBox__calc">
@@ -32,7 +32,7 @@ const DescriptionHeader = () => {
                 <span>Term</span>
                 <span>12 months</span>
               </div>
-              <input type="range" id="initialFee" className="slider" min="0" max="12" value="4" />
+              <input type="range" id="initialFee" className="slider" min="0" max="12" />
             </div>
 
             <div className="descBox__calc__payment">
