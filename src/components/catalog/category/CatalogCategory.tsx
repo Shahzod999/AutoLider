@@ -4,17 +4,17 @@ import { MdKeyboardArrowUp } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import "./category.scss";
 
-interface Category {
-  Brand: string[];
-  Model: {
-    [key: string]: string[];
-  };
-  Body: string[];
-  Engine: string[];
-  Transmission: string[];
-  "Drive unit": string[];
-  "Type of fuel": string[];
-}
+// interface Category {
+//   Brand: string[];
+//   Model: {
+//     [key: string]: string[];
+//   };
+//   Body: string[];
+//   Engine: string[];
+//   Transmission: string[];
+//   "Drive unit": string[];
+//   "Type of fuel": string[];
+// }
 
 const CatalogCategory: React.FC = () => {
   return (

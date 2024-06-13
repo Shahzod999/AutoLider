@@ -5,9 +5,6 @@ import Maps from "@/components/maps/Maps";
 export default function Catalog() {
   return (
     <>
-      <header>
-        <Navigation />
-      </header>
       <main className="container">
         <CatalogAll />
       </main>

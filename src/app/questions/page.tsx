@@ -3,10 +3,8 @@ import Catalog from "../catalog/page";
 
 export default function Questions() {
   return (
-    <>
-      <header>
-        <Navigation />
-      </header>
-    </>
+    <main>
+      sdsd
+    </main>
   );
 }

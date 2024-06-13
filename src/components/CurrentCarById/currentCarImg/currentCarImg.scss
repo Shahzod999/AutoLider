@@ -1,0 +1,28 @@
+.imageOfCar {
+  width: 650px;
+  height: 340px;
+  margin-top: 100px;
+  .mySwiper {
+    .swiperSlide {
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: unset !important;
+  color: #3d3d3d !important;
+}
+.swiper-pagination {
+  position: unset !important;
+}
+.swiper-pagination-bullet {
+  height: 4px !important;
+  width: 50px !important;
+  border-radius: 5px !important;
+  background-color: #bf3535 !important;
+}
