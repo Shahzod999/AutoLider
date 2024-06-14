@@ -8,6 +8,7 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 28.44px;
+    text-wrap: nowrap;
     span {
       color: #bf3535;
     }
@@ -32,7 +33,7 @@
           left: 0;
           right: 0;
           height: 3px;
-          transition: 0.5s ease;
+          transition: 0.5s ease-in-out;
         }
         &:hover {
           color: #bf3535;
@@ -60,7 +61,7 @@
       }
 
       &:hover .buttonHover {
-        transition: 0.5s ease;
+        transition: 0.5s ease-in-out;
         fill: white;
         background-color: #bf3535;
         border-radius: 50%;
@@ -79,7 +80,7 @@
         font-size: 13px;
         font-weight: 500;
         line-height: 15.41px;
-        transition: 0.5s ease;
+        transition: 0.5s ease-in-out;
         .personalInfo {
           display: flex;
           flex-direction: column;
@@ -109,7 +110,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            transition: 0.5s ease;
+            transition: 0.5s ease-in-out;
 
             &:hover {
               transform: scale(1.02);
@@ -121,7 +122,7 @@
         }
         .personal {
           color: white;
-          transition: 0.5s ease;
+          transition: 0.5s ease-in-out;
 
           &:hover {
             transform: scale(1.1);
@@ -131,7 +132,7 @@
           display: flex;
           align-items: center;
           gap: 5px;
-          transition: 0.5s ease;
+          transition: 0.5s ease-in-out;
 
           span {
             color: white;
@@ -155,7 +156,7 @@
       border: 1px solid;
       border-radius: 20px;
       padding: 10px 25px;
-      transition: 0.5s ease;
+      transition: 0.5s ease-in-out;
       cursor: pointer;
     }
     .button:hover {

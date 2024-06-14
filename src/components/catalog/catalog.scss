@@ -28,11 +28,12 @@
       gap: 10px;
       button {
         text-wrap: nowrap;
+        width: 100%;
         padding: 10px 15px;
         background-color: #3d3d3d;
         color: white;
         border-radius: 5px;
-        border: none;
+        border: 1px solid #3d3d3d;
         &:hover {
           background-color: #606060;
         }
@@ -61,7 +62,7 @@
         width: 40px;
         height: 40px;
         border-radius: 5px;
-        transition: 0.5s ease;
+        transition: 0.5s ease-in-out;
         &:hover {
           background-color: #9f9f9f;
           color: rgb(52, 52, 52);

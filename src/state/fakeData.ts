@@ -38,26 +38,26 @@ export const car = {
       PermissibleTotalWeight: 1000,
     },
   },
-  SPECIFICATIONS: {
+  specifications: {
     engine: {
-      WorkingVolume: 195,
+      WorkingVolume: 95,
       MaximumTorque: '30 / 170 - 170',
       MaximumPower: '10/400',
       NumberOfCylinders: '1/2',
     },
     RunningQuality: {
-      MaximumSpeed: 20,
-      AccelerationTime: 1.2,
+      MaximumSpeed: 320,
+      AccelerationTime: 1.4342,
     },
     FuelConsumption: {
-      CombinedCycle: 20,
-      ExtraUrbanCycle: 1.2,
-      UrbanCycle: '15 / 400 - 400',
+      CombinedCycle: 7720,
+      ExtraUrbanCycle: 18.2,
+      UrbanCycle: '175 / 4070 - 4070',
       CO2Emissions: '4 / 1',
     },
     weight: {
-      UnladenWeight: 150,
-      PermissibleTotalWeight: 180,
+      UnladenWeight: 1550,
+      PermissibleTotalWeight: 1850,
     },
   }
 }

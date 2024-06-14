@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import "./descriptionHeader.scss";
 import ContactUs from "./ContactUs/ContactUs";
+import InitialTerm from "../initialTerm/InitialTerm";
 
 const DescriptionHeader = () => {
   return (
@@ -11,15 +12,17 @@ const DescriptionHeader = () => {
           <div className="descBox">
             <h2>Like a loan only easier</h2>
 
-            <div className="descBox__calc">
-              <div className="descBox__calc__box">
-                <span>Car cost</span>
+            <div className="aboutCarRight__scroll">
+              <div className="initial">
+                <strong>Car cost</strong>
                 <span>5000000</span>
               </div>
               <input type="range" id="initialFee" className="slider" min="100000" max="5000000" />
             </div>
 
-            <div className="descBox__calc">
+            <InitialTerm />
+
+            {/* <div className="descBox__calc">
               <div className="descBox__calc__box">
                 <span>An initial fee</span>
                 <span>5000000</span>
@@ -33,7 +36,7 @@ const DescriptionHeader = () => {
                 <span>12 months</span>
               </div>
               <input type="range" id="initialFee" className="slider" min="0" max="12" />
-            </div>
+            </div> */}
 
             <div className="descBox__calc__payment">
               <div>
@@ -48,6 +51,7 @@ const DescriptionHeader = () => {
                 <span>/ Per day</span>
               </div>
             </div>
+            
           </div>
 
           <div className="descBoxCar">
