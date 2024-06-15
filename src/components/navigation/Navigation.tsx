@@ -64,7 +64,9 @@ const Navigation = () => {
                 </div>
               ) : (
                 <button className="button personalArea">
-                  <div className="personal">Personal Area</div>
+                  <Link href="/personalArea" className="personal">
+                    Personal Area
+                  </Link>
 
                   <span>|</span>
 
