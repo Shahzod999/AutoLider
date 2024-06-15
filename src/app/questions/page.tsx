@@ -1,10 +1,17 @@
 import Navigation from "@/components/navigation/Navigation";
 import Catalog from "../catalog/page";
+import Maps from "@/components/maps/Maps";
+import QuestionText from "./questionText/QuestionText";
 
 export default function Questions() {
   return (
-    <main>
-      sdsd
-    </main>
+    <>
+      <main className="container">
+        <QuestionText />
+      </main>
+      <footer>
+        <Maps />
+      </footer>
+    </>
   );
 }

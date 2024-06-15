@@ -5,6 +5,8 @@
   box-sizing: border-box;
   font-family: Rubik;
   color: #3d3d3d;
+
+  // text-wrap: nowrap;
   // border: solid;
 }
 li {
@@ -51,8 +53,6 @@ button {
   }
 }
 
-
-
 .aboutCarRight__scroll {
   display: flex;
   flex-direction: column;
@@ -63,8 +63,20 @@ button {
   }
 }
 
-
-
+.descBox__calc__payment {
+  display: flex;
+  justify-content: space-between;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  strong {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35.55px;
+  }
+}
 
 input[type="checkbox"] {
   accent-color: #bf3535;
@@ -112,7 +124,7 @@ input[type="range"] {
 
 input[type="range"] {
   color: #bf3535b2;
-  --thumb-height: 1.125em;
+  --thumb-height: 0.5em;
   --track-height: 0.125em;
   --track-color: rgba(0, 0, 0, 0.2);
   --brightness-hover: 130%;

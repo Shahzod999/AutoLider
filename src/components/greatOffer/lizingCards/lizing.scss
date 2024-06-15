@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 380px;
+  // width: 380px;
   padding: 20px 10px;
   cursor: pointer;
   // height: 620px;
@@ -21,6 +21,22 @@
       border-radius: 5px;
     }
   }
+  .rentBlocks {
+    display: flex;
+    gap: 10px;
+    span {
+      text-align: center;
+      padding: 13px 0;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14.22px;
+    }
+    span:first-child {
+      background-color: #daf1c5;
+    }
+  }
   .picture {
     img {
       width: 100%;
@@ -32,14 +48,5 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    .disc {
-      font-size: 22px;
-      font-weight: 600;
-      line-height: 26.07px;
-      span {
-        color: #bf3535;
-      }
-    }
-    
   }
 }

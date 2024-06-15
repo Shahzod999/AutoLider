@@ -7,6 +7,7 @@ import CurrentCarImg from "./currentCarImg/CurrentCarImg";
 import { car } from "@/state/fakeData";
 import "./currentCarById.scss";
 import InitialTerm from "../initialTerm/InitialTerm";
+import LizingPrice from "../greatOffer/lizingCards/lizingPrice/LizingPrice";
 
 const CurrentCarById = () => {
   const [engine, setEngine] = useState("standartEquipment");
@@ -21,12 +22,12 @@ const CurrentCarById = () => {
           </Link>
           <CurrentCarImg />
           <div className="aboutCarLeft__options">
-            <h4 tabIndex={0} onClick={() => setEngine("specifications")}>
+            <h2 className={engine === "specifications" ? `optionsActive` : ""} onClick={() => setEngine("specifications")}>
               specifications
-            </h4>
-            <h4 tabIndex={0} onClick={() => setEngine("standartEquipment")}>
+            </h2>
+            <h2 className={engine === "standartEquipment" ? `optionsActive` : ""} onClick={() => setEngine("standartEquipment")}>
               STANDARD EQUIPMENT
-            </h4>
+            </h2>
           </div>
 
           {engine === "specifications" && (
@@ -63,19 +64,8 @@ const CurrentCarById = () => {
         </div>
 
         <div className="aboutCarRight">
-          <div className="aboutCarRight__nameBox">
-            <h2>{car.name}</h2>
-            <span>Price</span>
-            <strong>{car.price} UZS</strong>
-            <span>Minimum payment from {car.MinimumPay} uzs</span>
-            <div className="aboutCarRight__nameBox">
-              <div className="view">
-                <span>View similar models</span>
-                <MdOutlineKeyboardArrowRight className="icon" />
-              </div>
-              <button>BOOK NOW</button>
-            </div>
-          </div>
+          <LizingPrice />
+
           <div className="aboutCarRight__info">
             {Object.entries(car.information).map(([key, value]) => (
               <div key={key} className="infoHolder">
@@ -86,6 +76,20 @@ const CurrentCarById = () => {
           </div>
 
           <InitialTerm />
+
+          <div className="descBox__calc__payment">
+            <div>
+              <strong>50000</strong>
+              <span>UZS</span>
+              <span>/ Per day</span>
+            </div>
+
+            <div>
+              <strong>50000.00</strong>
+              <span>UZS</span>
+              <span>/ Per day</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

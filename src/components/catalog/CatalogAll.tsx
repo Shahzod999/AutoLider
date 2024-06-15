@@ -11,7 +11,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 const CatalogAll = () => {
   return (
     <div className="catalogAll">
-      <h2>
+      <h2 className="catalogAll__title">
         Price
         <MdKeyboardArrowDown />
       </h2>

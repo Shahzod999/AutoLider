@@ -5,6 +5,7 @@ import "./navig.scss";
 import { PiUserCircleThin } from "react-icons/pi";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdLogout } from "react-icons/md";
+import Link from "next/link";
 
 const Navigation = () => {
   const [user, setUser] = useState({
@@ -22,9 +23,9 @@ const Navigation = () => {
   return (
     <div className="container">
       <div className="navigation">
-        <strong>
+        <Link href="/" className="logo">
           Auto <span>Lider</span>
-        </strong>
+        </Link>
         <nav>
           <ul>
             <li>
