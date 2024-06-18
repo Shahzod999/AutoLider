@@ -58,6 +58,7 @@ const questions = [
 
 const QuestionText = () => {
   const [openQuestionId, setOpenQuestionId] = useState(null);
+  const [faqChoosen, setFaqChoosen] = useState("LEASING");
 
   const handleStatusChange = (id) => {
     setOpenQuestionId((prevId) => (prevId === id ? null : id));
@@ -71,8 +72,12 @@ const QuestionText = () => {
       </div>
 
       <div className="leasingRent">
-        <span>LEASING </span>
-        <span>RENT</span>
+        <span className={faqChoosen === "LEASING" ? "faqChoosen" : ""} onClick={() => setFaqChoosen("LEASING")}>
+          LEASING
+        </span>
+        <span className={faqChoosen === "RENT" ? "faqChoosen" : ""} onClick={() => setFaqChoosen("RENT")}>
+          RENT
+        </span>
       </div>
 
       <div className="questionMainBox__text">

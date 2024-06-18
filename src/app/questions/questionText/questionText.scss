@@ -48,6 +48,19 @@
         width: 100%;
       }
     }
+
+    .faqChoosen {
+      &::after {
+        content: "";
+        background-color: red;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        transition: width 0.5s ease-in-out;
+      }
+    }
   }
 
   &__text {

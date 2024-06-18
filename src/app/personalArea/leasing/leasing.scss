@@ -1,0 +1,29 @@
+.leasingSchedule {
+  box-shadow: 0px 1px 5px 0px #00000026;
+  border-radius: 20px;
+  margin-top: 40px;
+
+  .leasingPagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 60px;
+
+    &__Arrow {
+      cursor: pointer;
+      font-size: 40px;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:active {
+        transform: scale(0.8);
+      }
+    }
+    &__buttons {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+}

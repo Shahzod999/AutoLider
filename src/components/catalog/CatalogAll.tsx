@@ -4,9 +4,7 @@ import CatalogCategory from "./category/CatalogCategory";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import LizingCard from "../greatOffer/lizingCards/LizingCard";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import Pagination from "../pagination/Pagination";
 
 const CatalogAll = () => {
   return (
@@ -49,15 +47,7 @@ const CatalogAll = () => {
             <LizingCard />
             <LizingCard />
             <LizingCard />
-            <div className="pagination">
-              <MdOutlineKeyboardArrowLeft className="icon left" />
-              <button>2</button>
-              <button>3</button>
-              <button>4</button>
-              <MdOutlineKeyboardArrowRight className="icon right" />
-              <MdOutlineKeyboardDoubleArrowRight className="icon right" />
-              <button>10</button>
-            </div>
+            <Pagination />
           </div>
         </div>
       </div>

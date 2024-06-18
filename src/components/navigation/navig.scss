@@ -1,172 +1,187 @@
-.navigation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 250px;
-  // padding-top: 30px;
-  .logo {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 28.44px;
-    text-wrap: nowrap;
-    span {
-      color: #bf3535;
-    }
-  }
-  nav {
+.navigWrapper {
+  box-shadow: 0px 1px 5px 0px #0000001a;
+
+  .navigation {
     display: flex;
     align-items: center;
-    font-weight: 500;
-    ul {
-      display: flex;
-      align-items: center;
-      gap: 110px;
-      li {
-        padding: 40px 0;
-        position: relative;
-        &::after {
-          content: "";
-          width: 0%;
-          background-color: #bf3535;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 3px;
-          transition: 0.5s ease-in-out;
-        }
-        &:hover {
-          color: #bf3535;
-          &::after {
-            width: 100%;
-          }
-        }
+    justify-content: space-between;
+    gap: 250px;
+    // padding-top: 30px;
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 28.44px;
+      text-wrap: nowrap;
+      span {
+        color: #bf3535;
       }
     }
-  }
-  .user {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    .userMenu {
+    nav {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      cursor: pointer;
-      .buttonActive {
-        fill: white;
-        box-shadow: 3px 3px 3px black inset;
-        background-color: #bf3535;
-        border-radius: 50%;
-      }
-
-      &:hover .buttonHover {
-        transition: 0.5s ease-in-out;
-        fill: white;
-        background-color: #bf3535;
-        border-radius: 50%;
-      }
-      &:active .buttonHover {
-        box-shadow: 1px 1px 1px black inset;
-      }
-
-      .personalArea {
+      font-weight: 500;
+      ul {
         display: flex;
-        position: absolute;
-        top: 100%;
-        padding: 13px 31px;
-        border-radius: 5px;
-        background-color: #3d3d3d;
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 15.41px;
-        transition: 0.5s ease-in-out;
-        .personalInfo {
+        align-items: center;
+        gap: 110px;
+        li {
+          padding: 40px 0;
+          position: relative;
+          &::after {
+            content: "";
+            width: 0%;
+            background-color: #bf3535;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            transition: 0.5s ease-in-out;
+          }
+          &:hover {
+            color: #bf3535;
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .userMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid #3d3d3d;
+        border-radius: 50%;
+        cursor: pointer;
+
+        .buttonActive {
+          fill: white;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5) inset;
+          background-color: #bf3535;
+        }
+        .buttonHover {
+          width: 100%;
+          height: 100%;
+          padding: 5px;
+          border-radius: 50%;
+          box-shadow: 0px 0px 10px 0px #00000080;
+        }
+
+        &:hover .buttonHover {
+          transition: 0.5s ease-in-out;
+          fill: white;
+          background-color: #bf3535;
+          border-radius: 50%;
+        }
+        &:active .buttonHover {
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5) inset;
+        }
+
+        .personalArea {
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          width: 282px;
-          height: 140px;
-          text-align: left;
-          padding: 7px 0;
-          * {
-            color: white;
-          }
-          span {
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 14.22px;
-          }
-          strong {
-            font-size: 10px;
-            font-weight: 500;
-            line-height: 11.85px;
-          }
-          button {
-            cursor: pointer;
-            text-align: left;
-            background-color: transparent;
-            border: none;
+          position: absolute;
+          top: 100%;
+          padding: 13px 31px;
+          border-radius: 5px;
+          background-color: #3d3d3d;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 15.41px;
+          transition: 0.5s ease-in-out;
+          z-index: 999;
+          .personalInfo {
             display: flex;
-            align-items: center;
-            gap: 15px;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 282px;
+            height: 140px;
+            text-align: left;
+            padding: 7px 0;
+            * {
+              color: white;
+            }
+            span {
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 14.22px;
+            }
+            strong {
+              font-size: 10px;
+              font-weight: 500;
+              line-height: 11.85px;
+            }
+            button {
+              cursor: pointer;
+              text-align: left;
+              background-color: transparent;
+              border: none;
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              transition: 0.5s ease-in-out;
+
+              &:hover {
+                transform: scale(1.02);
+              }
+              span {
+                font-size: 20px;
+              }
+            }
+          }
+          .personal {
+            color: white;
             transition: 0.5s ease-in-out;
 
             &:hover {
-              transform: scale(1.02);
+              transform: scale(1.1);
             }
+          }
+          .logIn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.5s ease-in-out;
+
             span {
-              font-size: 20px;
+              color: white;
             }
-          }
-        }
-        .personal {
-          color: white;
-          transition: 0.5s ease-in-out;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-        .logIn {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          transition: 0.5s ease-in-out;
-
-          span {
-            color: white;
-          }
-          svg {
-            fill: white;
-          }
-          &:hover {
-            transform: scale(1.1);
+            svg {
+              fill: white;
+            }
+            &:hover {
+              transform: scale(1.1);
+            }
           }
         }
       }
-    }
-    .button {
-      display: flex;
-      width: fit-content;
-      text-wrap: nowrap;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border: 1px solid;
-      border-radius: 20px;
-      padding: 10px 25px;
-      transition: 0.5s ease-in-out;
-      cursor: pointer;
-    }
-    .button:hover {
-      color: white;
-      background-color: #606060;
-      gap: 15px;
-    }
-    .button:active {
-      background-color: #626262;
-      box-shadow: 1px 1px 1px black inset;
+      .button {
+        box-shadow: 0px 0px 10px 0px #00000080;
+        display: flex;
+        width: fit-content;
+        text-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: 2px solid #3d3d3d;
+        border-radius: 20px;
+        padding: 10px 25px;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+      }
+      .button:hover {
+        color: white;
+        background-color: #606060;
+        gap: 15px;
+      }
+      .button:active {
+        background-color: #626262;
+        box-shadow: 1px 1px 1px black inset;
+      }
     }
   }
 }

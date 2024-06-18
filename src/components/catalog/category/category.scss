@@ -1,11 +1,20 @@
 .categoryPrice {
   padding-right: 50px;
   min-width: 380px;
-  h3 {
-    margin: 15px 0;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 23.7px;
+  .yearofIssue {
+    display: flex;
+    align-items: center;
+    h3 {
+      font-size: 20px;
+      cursor: pointer;
+      margin: 15px 0;
+      font-weight: 500;
+      line-height: 23.7px;
+    }
+    span {
+      font-size: 25px;
+      height: fit-content;
+    }
   }
   .range {
     display: flex;

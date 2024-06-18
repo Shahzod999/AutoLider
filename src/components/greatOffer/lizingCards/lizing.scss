@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  // width: 380px;
   padding: 20px 10px;
+  border-radius: 10px;
   cursor: pointer;
-  // height: 620px;
+  box-shadow: 0px 1px 10px 0px #00000026;
+
   .blocks {
     display: flex;
     flex-wrap: wrap;

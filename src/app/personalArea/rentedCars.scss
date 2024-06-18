@@ -1,0 +1,20 @@
+.rentedCars {
+  .yourCars {
+    flex: 1;
+    height: 400px;
+    h2 {
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 29.63px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-pagination-bullet-active {
+  background-color: #bf3535 !important;
+}

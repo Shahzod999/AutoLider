@@ -17,7 +17,7 @@ const CurrentCarById = () => {
       <div className="aboutCar">
         <div className="aboutCarLeft">
           <Link href="/catalog" className="prevPage">
-            <MdOutlineKeyboardArrowLeft className="icon" />
+            <MdOutlineKeyboardArrowLeft className="icon" size={35} />
             Return to catalog
           </Link>
           <CurrentCarImg />
