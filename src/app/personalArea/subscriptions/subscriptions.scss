@@ -1,0 +1,40 @@
+.socialSites {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  &__box {
+    display: flex;
+    gap: 20px;
+    width: 400px;
+    height: 200px;
+    box-shadow: 0px 1px 4px 0px #0000001a;
+    border-radius: 10px;
+    flex: 1;
+    padding: 30px;
+    cursor: pointer;
+
+    div {
+      display: grid;
+      row-gap: 20px;
+
+      h4 {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 20.15px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.59px;
+      }
+    }
+    .subscIcon {
+      flex-shrink: 0;
+      font-size: 40px;
+      transition: 0.3s ease-in-out;
+    }
+    &:hover .subscIcon {
+      transform: scale(1.08);
+    }
+  }
+}

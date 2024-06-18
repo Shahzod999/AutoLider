@@ -1,30 +1,14 @@
-"use client";
-
-import { useState } from "react";
-import { FaStar } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { BsFacebook } from "react-icons/bs";
+import UserCard from "../userCard/UserCard";
 
 const PersonalManager = () => {
-  const [inputData, setInputDate] = useState({
-    inputFirst: "",
-    inputSecond: "",
-    inputThird: "",
-    inputDate: "",
-  });
-  const [error, setError] = useState(false);
-
-  const inputChange = (name, e) => {
-    if (!isNaN(e.target.value)) {
-      setInputDate({ ...inputData, [name]: e.target.value });
-      setError(false);
-    } else {
-      setError(true);
-    }
-  };
   return (
     <div className="personalArea">
       <div className="personalArea__Name">
         <div className="personalArea__Name__Info">
-          <img src="" alt="" />
+          <img src="/user.jpg" alt="" />
           <h2>John Doe</h2>
         </div>
         <form>
@@ -39,27 +23,8 @@ const PersonalManager = () => {
       </div>
 
       <div className="personalManager">
-        <div className="cardHolder">
-          <div className="cardHolder__card">
-            <div className="cardHolder__card__name">
-              <span>
-                Card
-                <FaStar />
-              </span>
-            </div>
-
-            <div className="cardHolder__card__numbers">
-              <input type="password" name="" id="" placeholder="****" maxLength={4} onChange={(e) => inputChange("inputFirst", e)} value={inputData.inputFirst} />
-              <input type="password" name="" id="" placeholder="****" maxLength={4} onChange={(e) => inputChange("inputSecond", e)} value={inputData.inputSecond} />
-              <input type="password" name="" id="" placeholder="****" maxLength={4} onChange={(e) => inputChange("inputThird", e)} value={inputData.inputThird} />
-              <input type="text" placeholder="12/12" maxLength={4} onChange={(e) => inputChange("inputDate", e)} value={inputData.inputDate} />
-            </div>
-          </div>
-
-          <button onClick={() => console.log(inputData)}>+</button>
-        </div>
-        {error && <span className="ErrorMessage">Error write only number</span>}
         
+        <UserCard />
         
         <div className="personalManager__info">
           <div className="personalManager__info__namebox">
@@ -74,9 +39,9 @@ const PersonalManager = () => {
           <div className="personalManager__info__accauntBox">
             <p>We are in touch every day from 09:00 to 18:00</p>
             <div>
-              <img src="" alt="" />
-              <img src="" alt="" />
-              <img src="" alt="" />
+              <FaTelegram className="personalAreaIcons" />
+              <IoLogoWhatsapp className="personalAreaIcons" />
+              <BsFacebook className="personalAreaIcons" />
             </div>
           </div>
         </div>
