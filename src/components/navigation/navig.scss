@@ -1,3 +1,4 @@
+@import '../../app/media.scss';
 .navigWrapper {
   box-shadow: 0px 1px 5px 0px #0000001a;
 
@@ -5,8 +6,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 250px;
-    // padding-top: 30px;
     .logo {
       font-size: 24px;
       font-weight: 600;
@@ -24,6 +23,12 @@
         display: flex;
         align-items: center;
         gap: 110px;
+        @include media(1100){
+          gap: 50px;
+        }
+        @include media(900){
+          gap: 30px;
+        }
         li {
           padding: 40px 0;
           position: relative;

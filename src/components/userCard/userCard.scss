@@ -39,7 +39,8 @@
       justify-content: center;
       height: 50%;
 
-      input {
+      input,
+      span {
         width: 48px;
         color: white;
         background-color: transparent;
@@ -62,5 +63,14 @@
     border: 3px solid #3d3d3d;
     border-radius: 21px;
     font-size: 50px;
+  }
+}
+
+@keyframes Error {
+  0% {
+    transform: translate(-10px);
+  }
+  100% {
+    transform: translate(10px);
   }
 }
