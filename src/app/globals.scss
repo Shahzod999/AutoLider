@@ -6,9 +6,6 @@
   box-sizing: border-box;
   font-family: Rubik;
   color: #3d3d3d;
-
-  // text-wrap: nowrap;
-  // border: solid;
 }
 li {
   list-style: none;
@@ -77,6 +74,21 @@ button {
     font-size: 30px;
     font-weight: 400;
     line-height: 35.55px;
+  }
+}
+
+.ErrorMessage {
+  color: red;
+  animation: 0.2s alternate Error infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes Error {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(10px);
   }
 }
 

@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit"
 import paymentCardDataSlice from "./features/paymentCardDataSlice"
+import modalCardToggleSlice from "./features/modalCardToggleSlice"
 
 export const carStore = () => {
   return configureStore({
     reducer: {
       allCards: paymentCardDataSlice,
+      modalToggle: modalCardToggleSlice,
     },
   })
 }
