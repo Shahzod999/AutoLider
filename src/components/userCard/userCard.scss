@@ -2,53 +2,75 @@
   color: red;
   animation: 0.2s alternate Error infinite;
 }
-.cardHolder {
+
+.mydetails {
+  span {
+    background-color: #cacaca;
+  }
+}
+.selectedCard {
+  box-shadow: 0px 1px 30px 0px #bf3535e5;
+  span {
+    background-color: #bf3535;
+    color: white;
+    svg {
+      fill: white;
+    }
+  }
+  input::placeholder {
+    color: white;
+  }
+}
+
+.cardHolderMain {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
-  gap: 20px;
+  gap: 60px;
 
-  &__card {
-    width: 266px;
-    height: 100px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #3d3d3d;
-    &__name {
-      height: 50%;
-      display: flex;
-      align-items: center;
-      justify-self: center;
-      span {
+  .cardHolder {
+    &__card {
+      width: 266px;
+      height: 100px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #3d3d3d;
+      &__name {
+        height: 50%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        width: 100%;
-        padding: 6px 20px;
-        background-color: #cacaca;
-        font-size: 17px;
-        font-weight: 500;
-        line-height: 20.15px;
+        justify-self: center;
+        span {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 6px 20px;
+          font-size: 17px;
+          font-weight: 500;
+          line-height: 20.15px;
+        }
       }
-    }
-    &__numbers {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      justify-content: center;
-      height: 50%;
+      &__numbers {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
 
-      input,
-      span {
-        width: 48px;
-        color: white;
-        background-color: transparent;
-        outline: none;
-        border: none;
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 20.15px;
+        input,
+        span {
+          text-align: center;
+          width: 48px;
+          color: white;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 20.15px;
+        }
       }
     }
   }

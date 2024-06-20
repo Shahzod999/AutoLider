@@ -23,9 +23,8 @@ const PersonalManager = () => {
       </div>
 
       <div className="personalManager">
-        
-        <UserCard />
-        
+        <UserCard color={"mydetails"} />
+
         <div className="personalManager__info">
           <div className="personalManager__info__namebox">
             <h3>Your manager</h3>

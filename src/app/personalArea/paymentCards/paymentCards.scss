@@ -1,0 +1,52 @@
+.paymentCards {
+  flex: 1;
+  &__select {
+    display: flex;
+    justify-content: space-between;
+    &__text {
+      h2 {
+        margin-bottom: 20px;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 35.55px;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        & * {
+          font-size: 19px;
+          font-weight: 600;
+          line-height: 22.52px;
+          color: #cacaca;
+        }
+      }
+    }
+  }
+  &__otherCards {
+    h2 {
+      display: block;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 35.55px;
+      margin-bottom: 50px;
+    }
+    &__added {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 100px;
+    }
+  }
+  &__accauntName {
+    h2 {
+      display: block;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 35.55px;
+      margin-bottom: 50px;
+    }
+    
+  }
+}

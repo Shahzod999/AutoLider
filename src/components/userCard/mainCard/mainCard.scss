@@ -1,0 +1,14 @@
+.otherCards {
+  background-color: transparent !important;
+  border: 2px solid #bf3535;
+  &__name {
+    span {
+      background-color: #f1f1f1 !important;
+    }
+  }
+  &__numbers {
+    span {
+      color: #3d3d3d !important;
+    }
+  }
+}
