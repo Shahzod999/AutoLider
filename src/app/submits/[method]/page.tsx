@@ -3,9 +3,16 @@ import React, { useState } from "react";
 import "./requestAcall.scss";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import Link from "next/link";
+import RequestACall from "@/components/requestACall/RequestACall";
+import { usePathname } from "next/navigation";
+import Login from "@/components/login/Login";
 
 const page = () => {
+  const pathName = usePathname();
+  console.log(pathName);
+
   const [request, setRequest] = useState(false);
+
   const requestCallSubmit = () => {
     setRequest(true);
     setTimeout(() => {
@@ -24,33 +31,21 @@ const page = () => {
         </div>
 
         <div className="requestaCall__box__right">
+          
           <Link href="/" className="prevPage">
             <MdOutlineKeyboardArrowLeft className="icon" size={30} />
             <span>Return</span>
           </Link>
-          {!request && (
-            <>
-              <div className="requestaCall__box__right__text">
-                <h2>REQUEST A CALL</h2>
-                <span>Leave your phone number and we will call you back see you soon</span>
-              </div>
-              <form onSubmit={requestCallSubmit}>
-                <input type="text" placeholder="Name" required />
-                <input type="text" placeholder="Surname" required />
-                <input type="text" placeholder="+998 ( __ ) - ___-__-__" required />
-                <input type="submit" style={{ display: "none" }} />
-              </form>
-            </>
-          )}
-          {request && (
-            <div className="requestaCall__box__right__text">
-              <h2>THANK YOU FOR APPLICATION</h2>
-              <span className={`requestaCall__box__right__text ${request ? "submit" : ""}`}>Our specialist will contact you Please wait</span>
-            </div>
-          )}
+
+          {pathName == "/submits/request" && <RequestACall request={request} requestCallSubmit={requestCallSubmit} />}
+          {pathName == "/submits/login" && <Login request={request} requestCallSubmit={requestCallSubmit} />}
 
           <div className="requestaCall__box__right__checkbox">
-            <button onClick={requestCallSubmit}>CALL ME BACK</button>
+            <button onClick={requestCallSubmit}>
+              {pathName == "/submits/request" && "CALL ME BACK"}
+              {pathName == "/submits/login" && "SEND CODE"}
+            </button>
+
             <div className="requestaCall__box__right__checkbox__input">
               <input type="checkbox" />
               <p>I agree to the Terms of Personal Data Processing</p>

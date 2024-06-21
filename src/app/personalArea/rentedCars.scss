@@ -3,7 +3,7 @@
   .yourCars {
     flex: 1;
     height: 400px;
-    h2 {
+    > h2 {
       font-size: 25px;
       font-weight: 600;
       line-height: 29.63px;

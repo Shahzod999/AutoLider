@@ -67,7 +67,7 @@
         .buttonActive {
           fill: white;
           box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5) inset;
-          background-color: #bf3535;
+          background-color: #3d3d3d;
         }
         .buttonHover {
           width: 100%;
@@ -80,13 +80,9 @@
         &:hover .buttonHover {
           transition: 0.5s ease-in-out;
           fill: white;
-          background-color: #bf3535;
+          background-color: #3d3d3d;
           border-radius: 50%;
         }
-        &:active .buttonHover {
-          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5) inset;
-        }
-
         .personalArea {
           display: flex;
           position: absolute;

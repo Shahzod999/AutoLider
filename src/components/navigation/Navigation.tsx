@@ -81,15 +81,15 @@ const Navigation = () => {
 
                     <span>|</span>
 
-                    <div className="logIn">
+                    <Link href="/submits/login" className="logIn">
                       <span>Log - In</span>
                       <FaArrowRightLong />
-                    </div>
+                    </Link>
                   </button>
                 ))}
             </div>
 
-            <Link href="/requestACall" className="button">
+            <Link href="/submits/request" className="button">
               Request a call <FaArrowRightLong />
             </Link>
           </div>

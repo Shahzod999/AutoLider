@@ -3,6 +3,7 @@ import "./greatOffer.scss";
 import Image from "next/image";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import LizingCard from "./lizingCards/LizingCard";
+import Link from "next/link";
 
 const GreatOffer = () => {
   return (
@@ -11,7 +12,7 @@ const GreatOffer = () => {
         <h2>GreatOffer</h2>
 
         <div className="anotherCars">
-          <span>another cars</span>
+          <Link href="/catalog">another cars</Link>
           <div className="arrow">
             <div className="arrowInside">
               <div className="longArrow">
