@@ -3,7 +3,7 @@ import "./personalArea.scss";
 import "./rentedCars.scss";
 import ModalAddCard from "@/components/userCard/modalAddCard/ModalAddCard";
 
-export default function RootLayout({
+export default function PersonalLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

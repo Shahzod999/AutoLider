@@ -79,9 +79,9 @@ const Navigation = () => {
                 ))}
             </div>
 
-            <div className="button">
+            <Link href="/requestACall" className="button">
               Request a call <FaArrowRightLong />
-            </div>
+            </Link>
           </div>
         </div>
       </div>
