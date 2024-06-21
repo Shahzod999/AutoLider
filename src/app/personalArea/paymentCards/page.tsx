@@ -5,6 +5,7 @@ import { selectCar } from "@/lib/features/paymentCardDataSlice";
 import { useAppSelector } from "@/lib/hooks";
 import "./paymentCards.scss";
 import { PiNotePencil } from "react-icons/pi";
+import AccauntName from "@/components/accaunName/AccauntName";
 
 const page = () => {
   const cards = useAppSelector(selectCar);
@@ -35,6 +36,13 @@ const page = () => {
 
       <div className="paymentCards__accauntName">
         <h2>Account name</h2>
+        <div className="paymentCards__accauntName__box">
+          <AccauntName />
+          <AccauntName />
+          <AccauntName />
+          <AccauntName />
+          <AccauntName />
+        </div>
       </div>
     </div>
   );

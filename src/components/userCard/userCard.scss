@@ -29,6 +29,8 @@
   }
 
   .cardHolder {
+    border-radius: 10px;
+    overflow: hidden;
     &__card {
       width: 266px;
       height: 100px;
