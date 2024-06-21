@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./navig.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navigation = () => {
   const [user, setUser] = useState({
@@ -19,6 +20,15 @@ const Navigation = () => {
       userState: !prevState.userState,
     }));
   };
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setUser((prevState) => ({
+      ...prevState,
+      userState: false,
+    }));
+  }, [pathname]);
 
   return (
     <div className="navigWrapper">

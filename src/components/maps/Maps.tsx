@@ -47,11 +47,11 @@ const Maps = () => {
 
       <div className="adressMap" style={{ backgroundImage: "url('/maps.png')" }}>
         <form className="adressMapForm">
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Surname" />
-          <input type="text" placeholder="+998 ( __ ) - ___-__-__" />
-          <input type="email" name="" id="" placeholder="E-mail" />
-          <input type="text" placeholder="A comment" id="comment" />
+          <input type="text" placeholder="Name" required />
+          <input type="text" placeholder="Surname" required />
+          <input type="text" placeholder="+998 ( __ ) - ___-__-__" required />
+          <input type="email" name="" id="" placeholder="E-mail" required />
+          <input type="text" placeholder="A comment" id="comment" required />
           <button type="submit">Send</button>
         </form>
       </div>
