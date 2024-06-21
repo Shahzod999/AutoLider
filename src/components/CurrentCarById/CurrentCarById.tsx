@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Link from "next/link";
 import CurrentCarImg from "./currentCarImg/CurrentCarImg";
 import { car } from "@/state/fakeData";

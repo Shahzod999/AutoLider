@@ -2,8 +2,13 @@
 import React, { useState } from "react";
 import "./questionText.scss";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
+interface Question {
+  id: number;
+  question: string;
+  answer: string;
+}
 
-const questions = [
+const questions: Question[] = [
   {
     id: 1,
     question: "Who pays transport tax?",
@@ -57,10 +62,10 @@ const questions = [
 ];
 
 const QuestionText = () => {
-  const [openQuestionId, setOpenQuestionId] = useState(null);
+  const [openQuestionId, setOpenQuestionId] = useState<number | null>(null);
   const [faqChoosen, setFaqChoosen] = useState("LEASING");
 
-  const handleStatusChange = (id) => {
+  const handleStatusChange = (id: number) => {
     setOpenQuestionId((prevId) => (prevId === id ? null : id));
   };
 

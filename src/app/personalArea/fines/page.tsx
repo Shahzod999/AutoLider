@@ -9,8 +9,9 @@ import Calendar from "@/components/calendar/Calendar";
 const page = () => {
   const [calendar, setCalendar] = useState(false);
 
-  const toggleSwitch = (e) => {
-    e.target.classList.contains("switch-on") ? e.target.classList.remove("switch-on") : e.target.classList.add("switch-on");
+  const toggleSwitch = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    target.classList.contains("switch-on") ? target.classList.remove("switch-on") : target.classList.add("switch-on");
   };
 
   return (

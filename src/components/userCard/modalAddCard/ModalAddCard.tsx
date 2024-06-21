@@ -1,26 +1,33 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { ChangeEvent, FormEvent, useRef, useState } from "react";
 import "./modalAddCard.scss";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { modalToggleStatus, selectedStatusModal } from "@/lib/features/modalCardToggleSlice";
 import { addNewCard } from "@/lib/features/paymentCardDataSlice";
 
+interface InputData {
+  inputFirst: string;
+  inputSecond: string;
+  inputThird: string;
+  inputDate: string;
+}
+
 const ModalAddCard = () => {
   const dispatch = useAppDispatch();
   const modalStatus = useAppSelector(selectedStatusModal);
   const agreeCheckBox = useRef<HTMLInputElement>(null);
   const [error, setError] = useState(false);
-
-  const [inputData, setInputDate] = useState({
+  const [inputData, setInputDate] = useState<InputData>({
     inputFirst: "",
     inputSecond: "",
     inputThird: "",
     inputDate: "",
   });
 
-  const inputChange = (name, e) => {
-    if (!isNaN(e.target.value)) {
+  const inputChange = (name: keyof InputData, e: ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    if (!isNaN(Number(value))) {
       setInputDate({ ...inputData, [name]: e.target.value });
       setError(false);
     } else {
@@ -28,7 +35,7 @@ const ModalAddCard = () => {
     }
   };
 
-  const newCardAddStore = (e) => {
+  const newCardAddStore = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!agreeCheckBox.current?.checked) {
       alert("Вы должны согласиться с условиями обработки персональных данных");

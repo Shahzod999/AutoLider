@@ -1,4 +1,6 @@
-export const car = {
+import { Car, Category } from "./typesFakeData"
+
+export const car: Car = {
   name: 'Chevrolet malbu',
   price: 500000000,
   MinimumPay: "500000",
@@ -63,7 +65,7 @@ export const car = {
 }
 
 
-export const category = {
+export const category: Category = {
   Brand: ["All", "Chery", "Geely", "Chevrolet", "BMW", "Hyundai", "Volkswagen", "Toyota", "Mercedes-Benz"],
   Model: {
     Chery: ["Tiggo 7 pro", "Tiggo 7 pro", "Tiggo 7 pro", "Tiggo 4 pro"],

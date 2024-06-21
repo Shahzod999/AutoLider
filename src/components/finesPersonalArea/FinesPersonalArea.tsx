@@ -28,7 +28,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(dateTime, fines, amount, car, status) {
+function createData(dateTime: string, fines: string, amount: string, car: string, status: string) {
   return { dateTime, fines, amount, car, status };
 }
 

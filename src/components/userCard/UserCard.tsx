@@ -4,7 +4,7 @@ import { useAppDispatch } from "@/lib/hooks";
 import { modalToggleStatus } from "@/lib/features/modalCardToggleSlice";
 import SpecialCard from "./specialCard/SpecialCard";
 
-const UserCard = ({ color }) => {
+const UserCard = ({ color }: { color: string }) => {
   const dispatch = useAppDispatch();
 
   const handleToggleModal = () => {

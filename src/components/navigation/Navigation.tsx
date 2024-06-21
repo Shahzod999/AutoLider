@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import "./navig.scss";
-import { PiUserCircleThin } from "react-icons/pi";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";

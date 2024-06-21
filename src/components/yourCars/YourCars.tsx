@@ -3,10 +3,9 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import { IoIosAlert } from "react-icons/io";
 import "./yourCars.scss";
 
-const YourCars = ({ payment }) => {
+const YourCars = ({ payment }: { payment: boolean }) => {
   return (
     <div className="yourCars__main">
-      
       <div className="yourCars__main__info">
         <img src="/car1.png" alt="" />
         <div className="yourCars__main__info__text">

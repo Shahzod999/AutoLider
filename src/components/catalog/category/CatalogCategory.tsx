@@ -1,14 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import { category } from "@/state/fakeData";
-import { MdKeyboardArrowUp } from "react-icons/md";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import "./category.scss";
+import { Category } from "@/state/typesFakeData";
 
 const CatalogCategory: React.FC = () => {
-  const [arrowUp, setArrowUp] = useState([]);
+  const [arrowUp, setArrowUp] = useState<string[]>([]);
 
-  const handleArrow = (category) => {
+  const handleArrow = (category: string) => {
     setArrowUp((prevArrowUp) => {
       const isCategory = prevArrowUp.includes(category);
       if (isCategory) {
@@ -18,8 +18,6 @@ const CatalogCategory: React.FC = () => {
       }
     });
   };
-
-  console.log(arrowUp, "sdsd");
 
   return (
     <div className="categoryPrice">
@@ -42,9 +40,9 @@ const CatalogCategory: React.FC = () => {
             </div>
 
             {arrowUp.includes(categoryName) &&
-              (Array.isArray(category[categoryName]) ? (
+              (Array.isArray(category[categoryName as keyof Category]) ? (
                 <ul>
-                  {category[categoryName].map((option, i) => (
+                  {(category[categoryName as keyof Category] as string[]).map((option, i) => (
                     <li key={i}>
                       <input type="checkbox" name="" id="" />
                       {option}
@@ -52,12 +50,12 @@ const CatalogCategory: React.FC = () => {
                   ))}
                 </ul>
               ) : (
-                Object.keys(category[categoryName]).map((brand, i) => (
+                Object.keys(category[categoryName as keyof Category]).map((brand, i) => (
                   <div key={i}>
                     <h5>{brand}</h5>
                     <ul>
-                      {category[categoryName][brand].map((model, i) => (
-                        <li key={i}>
+                      {(category[categoryName as keyof Category] as { [key: string]: string[] })[brand].map((model, j) => (
+                        <li key={j}>
                           <input type="checkbox" name="" id="" />
                           {model}
                         </li>

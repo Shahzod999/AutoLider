@@ -10,7 +10,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
-const SpecialCard = ({ color }) => {
+const SpecialCard = ({ color }: { color: string }) => {
   const specialCards = useAppSelector(selectedSpecialCards);
 
   return (
