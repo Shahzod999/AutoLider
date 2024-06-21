@@ -11,11 +11,13 @@ interface Card {
 export interface CardState {
   value: Card[];
   specialCards: Card[];
+  status: boolean;
 }
 
 const initialState: CardState = {
   value: [],
   specialCards: [],
+  status: false,
 };
 
 export const paymentCardDataSlice = createSlice({
@@ -31,6 +33,7 @@ export const paymentCardDataSlice = createSlice({
       );
       if (!cardExists) {
         state.value.push(action.payload);
+        state.status = true
       } else {
         alert("Card already exist")
       }
@@ -42,7 +45,7 @@ export const paymentCardDataSlice = createSlice({
         card.inputThird === action.payload.inputThird &&
         card.inputDate === action.payload.inputDate
       );//проверка
-      
+
       if (!cardExists) {
         state.specialCards.push(action.payload);
       } else {//дел
@@ -53,11 +56,15 @@ export const paymentCardDataSlice = createSlice({
           card.inputDate !== action.payload.inputDate
         );
       }
+    },
+    changeStatusSuccess: (state) => {
+      state.status = false
     }
   },
 });
 
-export const { addNewCard, addSpecialCard } = paymentCardDataSlice.actions;
+export const { addNewCard, addSpecialCard, changeStatusSuccess } = paymentCardDataSlice.actions;
 export const selectCar = (state: RootState) => state.allCards.value;
+export const selectedStatus = (state: RootState) => state.allCards.status;
 export const selectedSpecialCards = (state: RootState) => state.allCards.specialCards;
 export default paymentCardDataSlice.reducer;

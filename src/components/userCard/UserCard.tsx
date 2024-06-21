@@ -6,6 +6,7 @@ import SpecialCard from "./specialCard/SpecialCard";
 
 const UserCard = ({ color }) => {
   const dispatch = useAppDispatch();
+
   const handleToggleModal = () => {
     dispatch(modalToggleStatus());
   };

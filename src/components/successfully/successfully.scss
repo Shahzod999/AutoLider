@@ -1,0 +1,22 @@
+.successfully {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  box-shadow: 0px 1px 5px 0px #00000033;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 20px 0;
+
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background-color: white;
+  span {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17.78px;
+  }
+}
