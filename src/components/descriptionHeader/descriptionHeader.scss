@@ -3,28 +3,29 @@
   .descriptionHeader {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 150px;
-    margin-top: 150px;
+    margin-top: 100px;
     @include media(1500) {
-      margin-top: 110px;
+      margin-top: 80px;
       gap: 120px;
     }
     @include media(1300) {
-      margin-top: 90px;
+      margin-top: 70px;
       gap: 100px;
     }
     @include media(1100) {
-      margin-top: 70px;
-      gap: 80px;
+      margin-top: 60px;
+      gap: 70px;
     }
     @include media(900) {
-      margin-top: 70px;
+      margin: 55px 0;
       gap: 50px;
+      flex-wrap: wrap-reverse;
     }
     @include media(750) {
       margin-top: 0px;
       gap: 5px;
-      flex-wrap: wrap-reverse;
     }
     .descBox {
       display: flex;
@@ -43,10 +44,11 @@
       }
       @include media(750) {
         gap: 10px;
-        margin-bottom: 50px;
+        margin: 50px 0;
       }
     }
     .descBoxCar {
+      // width: 100%;
       img {
         width: 100%;
         object-fit: contain;

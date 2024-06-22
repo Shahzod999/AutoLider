@@ -9,6 +9,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navigation = () => {
+  const [burgerMenu, setburgerMenu] = useState(false);
   const [user, setUser] = useState({
     userState: false,
     userInfo: false,
@@ -19,6 +20,10 @@ const Navigation = () => {
       ...prevState,
       userState: !prevState.userState,
     }));
+  };
+
+  const handleBfurgerMenu = () => {
+    setburgerMenu(!burgerMenu);
   };
 
   const pathname = usePathname();
@@ -34,6 +39,10 @@ const Navigation = () => {
     <div className="navigWrapper">
       <div className="container">
         <div className="navigation">
+          <div onClick={handleBfurgerMenu} className="burgerMenuHolder">
+            <div className={`burgerMenu ${!burgerMenu ? "burgerMenuOpen" : ""}`}></div>
+          </div>
+
           <Link href="/" className="logo">
             Auto <span>Lider</span>
           </Link>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import "./descriptionHeader.scss";
 import ContactUs from "./ContactUs/ContactUs";
 import InitialTerm from "../initialTerm/InitialTerm";
+import CurrentCarImg from "../CurrentCarById/currentCarImg/CurrentCarImg";
 
 const DescriptionHeader = () => {
   return (
@@ -39,7 +40,8 @@ const DescriptionHeader = () => {
           </div>
 
           <div className="descBoxCar">
-            <Image src="/car1.png" width={900} height={480} alt="Picture of the author" />
+            <CurrentCarImg/>
+            {/* <Image src="/car1.png" width={900} height={480} alt="Picture of the author" /> */}
           </div>
         </div>
       </div>
