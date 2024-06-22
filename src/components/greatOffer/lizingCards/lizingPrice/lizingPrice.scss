@@ -1,7 +1,9 @@
+@import "../../../../app/media.scss";
 .aboutCarRight__nameBox {
   display: flex;
   flex-direction: column;
   gap: 30px;
+
   h2 {
     width: fit-content;
     font-size: 2rem;
@@ -15,6 +17,10 @@
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
+    @include media(900) {
+      font-size: 1.5rem;
+      align-self: center;
+    }
   }
   span {
     font-size: 20px;

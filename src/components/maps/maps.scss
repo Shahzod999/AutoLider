@@ -1,74 +1,95 @@
+@import "../../app/media.scss";
 .maps {
   max-width: 1920px;
-  height: 850px;
+  // height: 850px;
   margin: 0 auto;
   margin-top: 200px;
   display: flex;
+  @include media(1500) {
+    margin-top: 150px;
+  }
+  @include media(1300) {
+    margin-top: 120px;
+  }
+  @include media(1100) {
+    margin-top: 90px;
+  }
+  @include media(900) {
+    flex-wrap: wrap;
+  }
+  @include media(800) {
+    margin-top: 60px;
+  }
   .contactForm {
     flex: 4;
-    padding-top: 150px;
+    padding: 50px;
   }
-  .container {
-    .contactForm__holder {
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
-      h2 {
-        color: white !important;
-        font-size: 40px;
-        font-weight: 600;
-        line-height: 47.4px;
-        position: relative;
-        width: fit-content;
-        padding-bottom: 20px;
-        cursor: default;
-        &:hover {
-          &::before {
-            transition: 0.5s ease-in-out;
-            left: 50%;
-          }
-        }
+  .contactForm__holder {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    @include media(900) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    h2 {
+      color: white !important;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 47.4px;
+      position: relative;
+      width: fit-content;
+      padding-bottom: 20px;
+      cursor: default;
+      &:hover {
         &::before {
-          content: "";
-          width: 50%;
-          height: 3px;
-          background-color: red;
-          position: absolute;
-          bottom: 0;
-          left: 0;
+          transition: 0.5s ease-in-out;
+          left: 50%;
         }
       }
-      .contactForm__icons {
-        display: flex;
-        gap: 50px;
-        align-items: center;
-        svg {
-          font-size: 35px;
-          fill: white;
-          cursor: pointer;
-          transition: 0.2s ease-in-out;
-          &:hover {
-            transform: scale(1.2);
-          }
+      &::before {
+        content: "";
+        width: 50%;
+        height: 3px;
+        background-color: red;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .contactForm__icons {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      @include media(950) {
+        gap: 25px;
+      }
+      svg {
+        font-size: 35px;
+        fill: white;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
         }
-        .contactInfo {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          strong {
-            color: white !important;
+      }
+      .contactInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        strong {
+          color: white !important;
 
-            font-size: 25px;
-            font-weight: 600;
-            line-height: 29.63px;
-          }
-          span {
-            color: white !important;
+          font-size: 25px;
+          font-weight: 600;
+          line-height: 29.63px;
+        }
+        span {
+          color: white !important;
 
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 21px;
-          }
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 21px;
         }
       }
     }
@@ -77,24 +98,54 @@
     flex: 5;
     display: flex;
     align-items: flex-end;
-    padding: 80px;
+    padding: 2vw;
     filter: grayscale(100%);
     background-position: center;
-
+    @include media(900) {
+      justify-content: center;
+    }
     .adressMapForm {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
       padding: 35px;
-      width: 580px;
       border-radius: 10px;
       border: 0.5px solid lightgray;
       background-color: white;
+      @include media(1300) {
+        gap: 25px;
+      }
+      @include media(1100) {
+        gap: 20px;
+      }
+      @include media(900) {
+        gap: 15px;
+        padding: 25px;
+      }
+      @include media(750) {
+        gap: 10px;
+        padding: 20px;
+      }
       input {
         height: 55px;
         border: none;
-        padding: 15px;
+        padding: 15px 30px;
         border-bottom: 0.5px solid #cacaca;
+        @include media(1500) {
+          padding: 15px 20px;
+        }
+        @include media(1300) {
+          padding: 15px 15px;
+        }
+        @include media(1100) {
+          padding: 15px 10px;
+        }
+        @include media(900) {
+          padding: 15px 5px;
+        }
+        @include media(750) {
+          padding: 15px 0;
+        }
       }
       button {
         padding: 15px;

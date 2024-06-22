@@ -12,7 +12,6 @@ const Maps = () => {
   return (
     <div className="maps">
       <div className="contactForm" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/footer.png')" }}>
-        <div className="container">
           <div className="contactForm__holder">
             <h2>Contacts</h2>
             <div className="contactForm__icons">
@@ -42,7 +41,6 @@ const Maps = () => {
               <FaWhatsapp />
             </div>
           </div>
-        </div>
       </div>
 
       <div className="adressMap" style={{ backgroundImage: "url('/maps.png')" }}>

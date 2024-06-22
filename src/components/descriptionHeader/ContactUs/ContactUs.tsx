@@ -17,7 +17,7 @@ const ContactUs = () => {
         <p>Choose a car from our catalog or offer your own option</p>
         <strong className="contactus__box__backNumbers">01</strong>
       </Link>
-      <Link href="/requestACall" className="contactus__box">
+      <Link href="/submits/request" className="contactus__box">
         <span>CONTACT TO US</span>
         <div className="arrow">
           <div className="arrowInside">
