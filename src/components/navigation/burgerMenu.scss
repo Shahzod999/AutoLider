@@ -1,0 +1,53 @@
+@import "../../app/media.scss";
+.burgerMenuHolder {
+  display: none;
+  width: 32px;
+  cursor: pointer;
+  right: 2rem;
+  top: 2rem;
+  z-index: 9;
+  @include media(900) {
+    display: block;
+  }
+}
+
+.burgerMenuHolder span {
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  border-radius: 12px;
+  display: block;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.burgerMenuHolder span::before,
+.burgerMenuHolder span::after {
+  content: "";
+  width: 100%;
+  background-color: black;
+  display: block;
+  transition: all 0.5s ease-in-out;
+  border-radius: 12px;
+  height: 4px;
+}
+
+.burgerMenuHolder span::before {
+  transform: translateY(-10px);
+}
+
+.burgerMenuHolder span::after {
+  transform: translateY(10px);
+  margin-top: -4px;
+}
+
+.burgerMenuHolder.burgerMenuOpen span {
+  background-color: transparent;
+}
+
+.burgerMenuHolder.burgerMenuOpen span::before {
+  transform: rotateZ(45deg) translateY(0);
+}
+
+.burgerMenuHolder.burgerMenuOpen span::after {
+  transform: rotateZ(-45deg) translateY(0);
+}

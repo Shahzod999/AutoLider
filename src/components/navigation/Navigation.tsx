@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import "./navig.scss";
+import "./burgerMenu.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
@@ -22,7 +23,7 @@ const Navigation = () => {
     }));
   };
 
-  const handleBfurgerMenu = () => {
+  const handleBurgerMenu = () => {
     setburgerMenu(!burgerMenu);
   };
 
@@ -39,14 +40,14 @@ const Navigation = () => {
     <div className="navigWrapper">
       <div className="container">
         <div className="navigation">
-          <div onClick={handleBfurgerMenu} className="burgerMenuHolder">
-            <div className={`burgerMenu ${!burgerMenu ? "burgerMenuOpen" : ""}`}></div>
+          <div onClick={handleBurgerMenu} className={`burgerMenuHolder ${burgerMenu ? "burgerMenuOpen" : ""}`}>
+            <span></span>
           </div>
 
           <Link href="/" className="logo">
             Auto <span>Lider</span>
           </Link>
-          <nav>
+          <nav className={`${burgerMenu ? "navBurgerMenu" : ""}`}>
             <ul>
               <li>
                 <a href="/">HOME</a>
