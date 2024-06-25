@@ -1,34 +1,74 @@
+@import "../../app/media.scss";
 .catalogAll {
+  position: relative;
   &Box {
     display: flex;
+    position: relative;
   }
   &__title {
-    display: flex;
-    align-items: center;
     margin-top: 50px;
     margin-bottom: 30px;
-
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 23.7px;
+    width: fit-content;
+    @include media(750) {
+      margin-top: 35px;
+    }
   }
 }
 .category {
-  flex: 1;
+  // flex: 1;
+  transition: 0.5s ease-in-out;
+
+  @include media(1250) {
+    position: absolute;
+    background-color: white;
+    z-index: 5;
+    box-shadow: 0px 1px 10px 0px #00000026;
+    padding: 50px;
+    width: 500px;
+    border-radius: 10px;
+    transform: translate(-100%);
+    opacity: 0;
+  }
 }
+.openCategory {
+  & * {
+    animation: 1s alternate catalogOpenAnime;
+  }
+  @include media(1250) {
+    width: fit-content;
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes catalogOpenAnime {
+  0% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
+}
+
 .catalogCars {
-  flex: 4;
+  width: 100%;
+  // flex: 4;
   .catalogHeader {
     display: flex;
     justify-content: space-between;
-    gap: 450px;
+    gap: 5px;
     margin-bottom: 15px;
+    width: 100%;
+    flex-wrap: wrap;
     .catalogButtons {
       display: flex;
       gap: 10px;
+      flex-wrap: wrap;
+      align-content: flex-start;
+
       button {
         text-wrap: nowrap;
-        width: 100%;
+        width: fit-content;
         padding: 10px 15px;
         background-color: #3d3d3d;
         color: white;
@@ -48,8 +88,17 @@
 
   .gridLizingCard {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 
+    @include media(1650) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include media(950) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media(600) {
+      grid-template-columns: 1fr;
+    }
   }
 }

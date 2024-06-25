@@ -1,21 +1,24 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./catalog.scss";
 import CatalogCategory from "./category/CatalogCategory";
-import { MdKeyboardArrowUp } from "react-icons/md";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { BsFilterSquareFill } from "react-icons/bs";
 import LizingCard from "../greatOffer/lizingCards/LizingCard";
 import Pagination from "../pagination/Pagination";
 
 const CatalogAll = () => {
+  const [filter, setFilter] = useState(false);
+
   return (
     <div className="catalogAll">
-      <h2 className="catalogAll__title">
-        Price
-        <MdKeyboardArrowDown />
-      </h2>
+      <div className="catalogAll__title prevPage" onClick={() => setFilter(!filter)}>
+        <span>
+          <BsFilterSquareFill className={filter ? "icon" : ""} size={25} />
+        </span>
+      </div>
 
       <div className="catalogAllBox">
-        <div className="category">
+        <div className={`category ${filter ? "openCategory" : ""}`}>
           <CatalogCategory />
         </div>
 
@@ -47,8 +50,8 @@ const CatalogAll = () => {
             <LizingCard />
             <LizingCard />
             <LizingCard />
-            <Pagination />
           </div>
+          <Pagination />
         </div>
       </div>
     </div>

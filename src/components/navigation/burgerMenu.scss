@@ -2,12 +2,15 @@
 .burgerMenuHolder {
   display: none;
   width: 32px;
+  height: 30px;
   cursor: pointer;
   right: 2rem;
   top: 2rem;
   z-index: 9;
   @include media(900) {
-    display: block;
+    display: flex;
+    place-items: center;
+    flex-shrink: 0;
   }
 }
 

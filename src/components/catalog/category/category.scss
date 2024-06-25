@@ -1,6 +1,17 @@
+@import "../../../app/media.scss";
+
 .categoryPrice {
   padding-right: 50px;
-  min-width: 380px;
+  width: 350px;
+  @include media(1500) {
+    width: 300px;
+  }
+  @include media(1300) {
+    width: 280px;
+  }
+  @include media(1000) {
+    padding-right: 0px;
+  }
   .yearofIssue {
     display: flex;
     align-items: center;
@@ -47,7 +58,7 @@
       transform: rotate(180deg);
     }
   }
-  .category {
+  .categoryInSide {
     .categoryBox {
       h5 {
         margin: 15px 0;

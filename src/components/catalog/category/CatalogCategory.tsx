@@ -31,7 +31,7 @@ const CatalogCategory: React.FC = () => {
         <input type="range" id="initialFee" className="slider" min="100000" max="5000000" />
       </div>
 
-      <div className="category">
+      <div className="categoryInSide">
         {Object.keys(category).map((categoryName, index) => (
           <div key={index} className="categoryBox">
             <div className="yearofIssue" onClick={() => handleArrow(categoryName)}>
