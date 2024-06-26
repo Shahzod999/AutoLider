@@ -1,20 +1,26 @@
+@import "../../media.scss";
 .socialSites {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   gap: 40px;
   &__box {
     display: flex;
     gap: 20px;
     width: 400px;
-    height: 200px;
+    height: fit-content;
     box-shadow: 0px 1px 4px 0px #0000001a;
     border-radius: 10px;
     flex: 1;
     padding: 30px;
     cursor: pointer;
+    @include media(450) {
+      flex-wrap: wrap;
+    }
 
     div {
-      display: grid;
+      display: flex;
+      flex-direction: column;
       row-gap: 20px;
 
       h4 {
@@ -23,6 +29,7 @@
         line-height: 20.15px;
       }
       p {
+        min-width: 200px;
         font-size: 14px;
         font-weight: 400;
         line-height: 16.59px;

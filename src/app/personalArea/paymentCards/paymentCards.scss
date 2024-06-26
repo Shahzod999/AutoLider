@@ -1,8 +1,14 @@
+@import "../../../app/media.scss";
 .paymentCards {
   flex: 1;
   &__select {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include media(700) {
+      justify-content: center;
+    }
     &__text {
       h2 {
         margin-bottom: 20px;
@@ -34,9 +40,27 @@
     &__added {
       flex: 1;
       display: flex;
+      align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
-      gap: 40px;
-      margin-bottom: 100px;
+      column-gap: 40px;
+      margin-bottom: 60px;
+      @include media(1600) {
+        column-gap: 35px;
+        margin-bottom: 50px;
+      }
+      @include media(1400) {
+        column-gap: 35px;
+        margin-bottom: 40px;
+      }
+      @include media(1100) {
+        column-gap: 30px;
+        margin-bottom: 30px;
+      }
+
+      @include media(750) {
+        column-gap: 25px;
+      }
     }
   }
   &__accauntName {
@@ -49,6 +73,7 @@
     }
     &__box {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 40px;
       margin-bottom: 100px;
