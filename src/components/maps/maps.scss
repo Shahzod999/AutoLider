@@ -113,11 +113,14 @@
       border-radius: 10px;
       border: 0.5px solid lightgray;
       background-color: white;
+      min-width: 300px;
       @include media(1300) {
         gap: 25px;
+        padding: 30px;
       }
       @include media(1100) {
         gap: 20px;
+        padding: 28px;
       }
       @include media(900) {
         gap: 15px;
@@ -128,10 +131,12 @@
         padding: 20px;
       }
       input {
+        width: 100%;
         height: 55px;
         border: none;
         padding: 15px 30px;
         border-bottom: 0.5px solid #cacaca;
+
         @include media(1500) {
           padding: 15px 20px;
         }
