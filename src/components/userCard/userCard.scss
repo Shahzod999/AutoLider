@@ -20,12 +20,13 @@
 .cardHolderMain {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 50px;
-  gap: 60px;
+  flex-wrap: wrap;
+  gap: 25px;
   .specialCardContainer {
     display: flex;
-    width: 300px;
+    max-width: 266px;
   }
 
   .cardHolder {

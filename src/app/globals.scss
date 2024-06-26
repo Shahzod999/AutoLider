@@ -147,6 +147,15 @@ button {
   }
 }
 
+@keyframes catalogOpenAnime {
+  0% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
+}
+
 input[type="checkbox"] {
   accent-color: #bf3535;
 }

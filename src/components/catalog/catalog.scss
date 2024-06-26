@@ -15,7 +15,6 @@
   }
 }
 .category {
-  // flex: 1;
   transition: 0.5s ease-in-out;
 
   @include media(1250) {
@@ -29,24 +28,29 @@
     transform: translate(-100%);
     opacity: 0;
   }
+  @include media(1000) {
+    padding: 45px;
+  }
+  @include media(900) {
+    padding: 40px;
+  }
+  @include media(700) {
+    padding: 35px;
+  }
+  @include media(500) {
+    padding: 30px;
+  }
 }
 .openCategory {
   & * {
     animation: 1s alternate catalogOpenAnime;
   }
   @include media(1250) {
-    width: fit-content;
     transform: translate(0);
     opacity: 1;
   }
-}
-
-@keyframes catalogOpenAnime {
-  0% {
-    color: white;
-  }
-  100% {
-    color: black;
+  @include media(500) {
+    width: 100%;
   }
 }
 

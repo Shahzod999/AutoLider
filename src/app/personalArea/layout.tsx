@@ -1,7 +1,8 @@
-import Link from "next/link";
+import Aside from "@/components/personalArea/aside/Aside";
 import "./personalArea.scss";
 import "./rentedCars.scss";
 import ModalAddCard from "@/components/userCard/modalAddCard/ModalAddCard";
+import PressIcon from "@/components/personalArea/pressIcon/PressIcon";
 
 export default function PersonalLayout({
   children,
@@ -12,26 +13,7 @@ export default function PersonalLayout({
     <>
       <main className="container">
         <div className="personalAreaMain">
-          <aside>
-            <Link href="/personalArea">
-              <span>My details</span>
-            </Link>
-            <Link href="/personalArea/rent">
-              <span>Rent</span>
-            </Link>
-            <Link href="/personalArea/leasing">
-              <span>Leasing</span>
-            </Link>
-            <Link href="/personalArea/paymentCards">
-              <span>Payment cards</span>
-            </Link>
-            <Link href="/personalArea/fines">
-              <span>Fines</span>
-            </Link>
-            <Link href="/personalArea/subscriptions">
-              <span>Subscriptions</span>
-            </Link>
-          </aside>
+          <Aside />
           <span className="border"></span>
           {children}
         </div>
