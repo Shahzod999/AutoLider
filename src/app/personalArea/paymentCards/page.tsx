@@ -1,25 +1,13 @@
 "use client";
 import MainCard from "@/components/userCard/mainCard/MainCard";
 import UserCard from "@/components/userCard/UserCard";
-import { changeStatusSuccess, selectCar, selectedStatus } from "@/lib/features/paymentCardDataSlice";
-import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { selectCar } from "@/lib/features/paymentCardDataSlice";
+import { useAppSelector } from "@/lib/hooks";
 import "./paymentCards.scss";
 import { PiNotePencil } from "react-icons/pi";
 import AccauntName from "@/components/accaunName/AccauntName";
-import Successfully from "@/components/successfully/Successfully";
-import { useEffect, useState } from "react";
 const page = () => {
-  const dispatch = useAppDispatch();
-  const successStatus = useAppSelector(selectedStatus);
   const cards = useAppSelector(selectCar);
-
-  useEffect(() => {
-    if (successStatus) {
-      setTimeout(() => {
-        dispatch(changeStatusSuccess());
-      }, 4000);
-    }
-  }, [successStatus]);
 
   return (
     <div className="paymentCards">
@@ -55,8 +43,6 @@ const page = () => {
           <AccauntName />
         </div>
       </div>
-
-      {successStatus && <Successfully />}
     </div>
   );
 };

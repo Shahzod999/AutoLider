@@ -5,6 +5,7 @@ import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { modalToggleStatus, selectedStatusModal } from "@/lib/features/modalCardToggleSlice";
 import { addNewCard } from "@/lib/features/paymentCardDataSlice";
+import Successfully from "@/components/successfully/Successfully";
 
 interface InputData {
   inputFirst: string;
@@ -90,6 +91,7 @@ const ModalAddCard = () => {
             </div>
           </div>
         </form>
+        <Successfully />
       </div>
     </>
   );

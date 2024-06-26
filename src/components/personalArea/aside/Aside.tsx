@@ -1,10 +1,15 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaReadme } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 const Aside = () => {
+  const pathname = usePathname();
   const [asideOpen, setAsideOpen] = useState(false);
+  useEffect(() => {
+    setAsideOpen(false);
+  }, [pathname]);
   return (
     <>
       <aside>
