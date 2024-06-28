@@ -28,6 +28,12 @@
   @include media(500) {
     width: 350px;
   }
+  @include media(400) {
+    width: 320px;
+  }
+  @include media(320) {
+    width: 300px;
+  }
 
   .mySwiper {
     .swiperSlide {
