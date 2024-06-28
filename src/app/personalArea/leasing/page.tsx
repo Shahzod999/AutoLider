@@ -21,15 +21,13 @@ const page = () => {
         <YourCars payment={true} />
 
         <div className="leasingSchedule">
-          <div className="leasingPagination">
+          <div className="leasingPagination" onClick={handleOpen}>
             <h2>PAYMENT SCHEDULE</h2>
 
             <div className="leasingPagination__buttons">
               {/* {arrow && <Pagination />} */}
 
-              <div onClick={handleOpen} className="leasingPagination__Arrow">
-                {arrow ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
-              </div>
+              <div className="leasingPagination__Arrow">{arrow ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</div>
             </div>
           </div>
 

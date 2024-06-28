@@ -9,9 +9,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 25px 60px;
-
+    cursor: pointer;
     &__Arrow {
-      cursor: pointer;
       font-size: 40px;
       transition: 0.5s ease-in-out;
       &:hover {

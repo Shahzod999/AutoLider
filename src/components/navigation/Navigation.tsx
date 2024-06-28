@@ -8,6 +8,7 @@ import { FaRegUser } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { IoCall } from "react-icons/io5";
 
 const Navigation = () => {
   const [burgerMenu, setburgerMenu] = useState(false);
@@ -100,7 +101,10 @@ const Navigation = () => {
             </div>
 
             <Link href="/submits/request" className="button">
-              Request a call <FaArrowRightLong />
+              <IoCall />
+              <span>
+                Request a call <FaArrowRightLong />
+              </span>
             </Link>
           </div>
         </div>

@@ -213,6 +213,13 @@
         cursor: pointer;
         background-color: white;
 
+        span {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transition: 0.5s ease-in-out;
+        }
+
         @include media(550) {
           padding: 10px 20px;
         }
@@ -221,16 +228,21 @@
           gap: 5px;
 
           position: fixed;
-          right: 0;
-          bottom: 25px;
+          right: 10px;
+          bottom: 35px;
           background-color: white;
           z-index: 2;
+          span{
+            display: none;
+          }
         }
       }
       .button:hover {
-        color: white;
+        span {
+          color: white;
+          gap: 15px;
+        }
         background-color: #606060;
-        gap: 15px;
       }
       .button:active {
         background-color: #626262;
