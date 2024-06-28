@@ -1,3 +1,5 @@
+@import "../../../app/media.scss";
+
 .borderHorizontal {
   display: block;
   width: 100%;
@@ -9,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
+
   &__box {
     display: flex;
     align-items: center;

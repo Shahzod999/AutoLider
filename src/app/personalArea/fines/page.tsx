@@ -41,7 +41,7 @@ const page = () => {
             </div>
           </div>
 
-          <Pagination />
+          {/* <Pagination /> */}
         </div>
 
         <FinesPersonalArea />

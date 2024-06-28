@@ -1,3 +1,4 @@
+@import "../../../app/media.scss";
 .leasingSchedule {
   box-shadow: 0px 1px 5px 0px #00000026;
   border-radius: 20px;
@@ -24,6 +25,18 @@
       display: flex;
       align-items: center;
       gap: 50px;
+      @include media(900) {
+        gap: 45px;
+      }
+      @include media(700) {
+        gap: 40px;
+      }
+      @include media(600) {
+        gap: 35px;
+      }
+      @include media(500) {
+        gap: 25px;
+      }
     }
   }
 }

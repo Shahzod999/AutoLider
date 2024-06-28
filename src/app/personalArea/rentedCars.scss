@@ -11,8 +11,17 @@
     @include media(1250) {
       height: 420px;
     }
-    @include media(900) {
+    @include media(950) {
       height: 550px;
+    }
+    @include media(600) {
+      height: 650px;
+    }
+    @include media(350) {
+      height: 700px;
+    }
+    @include media(350) {
+      height: 800px;
     }
 
     > h2 {
@@ -67,6 +76,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.swiper-pagination-vertical.swiper-pagination-bullets {
+  top: 0 !important;
+  transform: none !important;
 }
 .swiper-pagination-bullet-active {
   background-color: #bf3535 !important;

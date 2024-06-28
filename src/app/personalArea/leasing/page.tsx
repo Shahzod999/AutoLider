@@ -25,7 +25,7 @@ const page = () => {
             <h2>PAYMENT SCHEDULE</h2>
 
             <div className="leasingPagination__buttons">
-              {arrow && <Pagination />}
+              {/* {arrow && <Pagination />} */}
 
               <div onClick={handleOpen} className="leasingPagination__Arrow">
                 {arrow ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
