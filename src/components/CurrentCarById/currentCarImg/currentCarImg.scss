@@ -1,8 +1,8 @@
 @import "../../../app/media.scss";
 .imageOfCar {
   width: 650px;
-  // height: 340px;
   margin-top: 50px;
+  align-self: center;
   @include media(1300) {
     width: 570px;
     margin-top: 45px;

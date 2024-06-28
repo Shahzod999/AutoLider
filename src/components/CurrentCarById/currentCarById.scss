@@ -1,8 +1,24 @@
+@import "../../app/media.scss";
 .currentCar {
   margin-top: 100px;
+  @include media(1000) {
+    margin-top: 90px;
+  }
+  @include media(900) {
+    margin-top: 80px;
+  }
+  @include media(700) {
+    margin-top: 70px;
+  }
+  @include media(600) {
+    margin-top: 60px;
+  }
+  @include media(500) {
+    margin-top: 40px;
+  }
   .aboutCar {
     display: flex;
-    gap: 150px;
+    flex-wrap: wrap;
     margin-bottom: 200px;
 
     .aboutCarLeft {
@@ -16,6 +32,15 @@
       &__options {
         display: flex;
         gap: 50px;
+        @include media(600) {
+          gap: 45px;
+        }
+        @include media(500) {
+          gap: 25px;
+        }
+        @include media(450) {
+          gap: 20px;
+        }
         .optionsActive {
           &::after {
             content: "";
@@ -33,6 +58,7 @@
           }
         }
         h2 {
+          text-wrap: nowrap;
           font-size: 22px;
           font-weight: 500;
           line-height: 26.07px;
@@ -41,6 +67,12 @@
           transition: 0.5s ease-in-out;
           padding-bottom: 20px;
           position: relative;
+          @include media(600) {
+            font-size: 20px;
+          }
+          @include media(500) {
+            font-size: 17px;
+          }
           &::after {
             content: "";
             width: 0%;
@@ -66,7 +98,7 @@
       }
     }
     .aboutCarRight {
-      flex: 4;
+      flex: 2;
       display: flex;
       flex-direction: column;
       gap: 50px;
