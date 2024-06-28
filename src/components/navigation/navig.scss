@@ -213,7 +213,7 @@
         cursor: pointer;
         background-color: white;
 
-        span {
+        .requestSpan {
           display: flex;
           align-items: center;
           gap: 10px;
@@ -232,13 +232,13 @@
           bottom: 35px;
           background-color: white;
           z-index: 2;
-          span{
+          .requestSpan {
             display: none;
           }
         }
       }
       .button:hover {
-        span {
+        .requestSpan {
           color: white;
           gap: 15px;
         }

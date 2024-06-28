@@ -102,7 +102,7 @@ const Navigation = () => {
 
             <Link href="/submits/request" className="button">
               <IoCall />
-              <span>
+              <span className="requestSpan">
                 Request a call <FaArrowRightLong />
               </span>
             </Link>

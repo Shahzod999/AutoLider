@@ -26,13 +26,16 @@
       }
     }
     .mainCalendar {
-      top: 0;
-      left: 50%;
+      top: 50px;
+      width: 100%;
       position: absolute;
       z-index: 1;
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0px 1px 5px 0px #00000026;
+      div {
+        width: auto;
+      }
     }
     &__switch {
       display: flex;
