@@ -7,7 +7,9 @@ const YourCars = ({ payment }: { payment: boolean }) => {
   return (
     <div className="yourCars__main">
       <div className="yourCars__main__info">
-        <img src="/car1.png" alt="" />
+        <div className="yourCars__main__info__image">
+          <img src="/car1.png" alt="" />
+        </div>
         <div className="yourCars__main__info__text">
           <h3>
             Chevrolet <span>malibu</span>

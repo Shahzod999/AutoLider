@@ -3,7 +3,7 @@ import YourCars from "@/components/yourCars/YourCars";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Mousewheel, Pagination } from "swiper/modules";
 
 export default function page() {
   return (
@@ -12,10 +12,13 @@ export default function page() {
         <h2>Your cars</h2>
         <Swiper
           direction={"vertical"}
+          slidesPerView={1}
+          spaceBetween={30}
+          mousewheel={true}
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination]}
+          modules={[Mousewheel, Pagination]}
           className="mySwiper">
           <SwiperSlide>
             <YourCars payment={true} />

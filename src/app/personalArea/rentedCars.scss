@@ -1,20 +1,72 @@
+@import "../../app/media.scss";
+
 .rentedCars {
   width: 100%;
   .yourCars {
     flex: 1;
-    height: 400px;
+    height: 420px;
+    @include media(1300) {
+      height: 550px;
+    }
+    @include media(1250) {
+      height: 420px;
+    }
+    @include media(900) {
+      height: 550px;
+    }
+
     > h2 {
       font-size: 25px;
       font-weight: 600;
       line-height: 29.63px;
       margin-bottom: 40px;
+      @include media(1600) {
+        margin-bottom: 35px;
+      }
+      @include media(1400) {
+        margin-bottom: 30px;
+      }
+      @include media(1300) {
+        margin-bottom: 30px;
+      }
+      @include media(1100) {
+        margin-bottom: 25px;
+      }
+      @include media(900) {
+        margin-bottom: 20px;
+      }
+      @include media(550) {
+        margin-bottom: 15px;
+      }
     }
   }
 }
 
+// \
+//
+
 .swiper {
   width: 100%;
   height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .swiper-pagination-bullet-active {
   background-color: #bf3535 !important;
