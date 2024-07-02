@@ -6,29 +6,9 @@ import Link from "next/link";
 import RequestACall from "@/components/requestACall/RequestACall";
 import { usePathname } from "next/navigation";
 import Login from "@/components/login/Login";
-//
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { app } from "@/lib/firebase";
-import { useRouter } from "next/navigation";
-
-//
 
 const page = () => {
-  const router = useRouter();
-  const auth = getAuth(app);
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        router.push("/");
-      }
-    });
-  }, [auth, router]);
-  //
-
   const pathName = usePathname();
-  console.log(pathName);
-
   const [request, setRequest] = useState(false);
 
   const requestCallSubmit = () => {
@@ -56,7 +36,7 @@ const page = () => {
 
           {pathName == "/submits/request" && <RequestACall request={request} requestCallSubmit={requestCallSubmit} />}
 
-          {pathName == "/submits/login" && <Login request={request} requestCallSubmit={requestCallSubmit} />}
+          {pathName == "/submits/login" && <Login />}
 
           <div className="requestaCall__box__right__checkbox">
             <button onClick={requestCallSubmit}>

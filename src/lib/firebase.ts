@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCbN3uWin88FMOyV3uucSZbB28_C0SuezI',
-  authDomain: "autolider-f40fa.firebaseapp.com",
-  projectId: "autolider-f40fa",
-  storageBucket: "autolider-f40fa.appspot.com",
-  messagingSenderId: "910424399550",
-  appId: "1:910424399550:web:37ee8346cbcc40bed7c8ef"
+  apiKey: "AIzaSyCEbeRw90iMDLfdfoRQDmGD1MR3XGUbXBQ",
+  authDomain: "autocar-8e5f7.firebaseapp.com",
+  projectId: "autocar-8e5f7",
+  storageBucket: "autocar-8e5f7.appspot.com",
+  messagingSenderId: "816830113238",
+  appId: "1:816830113238:web:aa89761010eb891feeb077",
+  measurementId: "G-23JKYS3RHK"
 };
 
 const app = initializeApp(firebaseConfig);
-export { app }
 export const auth = getAuth(app)
