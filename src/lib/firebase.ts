@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  apiKey: 'AIzaSyCbN3uWin88FMOyV3uucSZbB28_C0SuezI',
   authDomain: "autolider-f40fa.firebaseapp.com",
   projectId: "autolider-f40fa",
   storageBucket: "autolider-f40fa.appspot.com",
@@ -10,3 +11,5 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+export { app }
+export const auth = getAuth(app)
