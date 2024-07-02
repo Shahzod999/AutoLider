@@ -2,13 +2,19 @@
 import "./login.scss";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import React, { useState, useEffect } from "react";
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { ConfirmationResult, RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 
+declare global {
+  interface Window {
+    recaptchaVerifier: RecaptchaVerifier;
+  }
+}
+
 const RequestACall = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [confirmationResult, setConfirmationResult] = useState(null);
+  const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
   const [otp, setOtp] = useState("");
   const [otpSent, setOtpSent] = useState(false);
   const [time, setTime] = useState(10);
@@ -29,7 +35,7 @@ const RequestACall = () => {
     window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {});
   }, [auth]);
 
-  const handleSentOtp = async (e) => {
+  const handleSentOtp = async (e: React.FormEvent<HTMLFormElement>) => {
     const appVerifier = window.recaptchaVerifier;
     e.preventDefault();
     handleRequest();
@@ -45,8 +51,12 @@ const RequestACall = () => {
     }
   };
 
-  const handleOtpsubmit = async (e) => {
+  const handleOtpsubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!confirmationResult) {
+      console.error("No confirmation result available");
+      return;
+    }
     try {
       await confirmationResult.confirm(otp);
       setOtp("");
